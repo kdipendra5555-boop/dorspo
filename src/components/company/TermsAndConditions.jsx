@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "../LandingComp/Navbar";
+import { useEffect } from "react";
 
 export default function TermsAndConditions() {
+
+     useEffect(() => {
+
+  window.scrollTo(0, 0);
+
+}, []);
 
   return (
     <section className="relative overflow-hidden bg-[#f5f5f2] text-black min-h-screen">
@@ -436,26 +443,27 @@ export default function TermsAndConditions() {
 
           </div>
 
-          <Link
-            to="/"
-            className="
-            inline-flex
-            items-center
-            justify-center
-            gap-3
-            px-8
-            py-4
-            rounded-full
-            bg-black
-            text-white
-            text-sm
-            tracking-wide
-            hover:scale-[1.03]
-            transition-all
-            duration-300"
-          >
-            Back Home
-          </Link>
+        <Link
+  to="/"
+  onClick={() => window.scrollTo(0, 0)}
+  className="
+  inline-flex
+  items-center
+  justify-center
+  gap-3
+  px-8
+  py-4
+  rounded-full
+  bg-black
+  text-white
+  text-sm
+  tracking-wide
+  hover:scale-[1.03]
+  transition-all
+  duration-300"
+>
+  Back Home
+</Link>
 
         </motion.div>
 

@@ -383,14 +383,8 @@ export default function Footer() {
   <div className="relative z-10 space-y-5">
 
     {[
-      {
-        name: "About Us",
-        path: "/about",
-      },
-      {
-        name: "Contact",
-        path: "/contact",
-      },
+      
+      
       {
         name: "Privacy Policy",
         path: "/privacy-policy",
