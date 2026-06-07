@@ -50,21 +50,23 @@ export default function AboutSection() {
               About dorspo
             </p>
 
-            <h2
-              className="
-              text-[42px]
-              sm:text-[58px]
-              md:text-[90px]
-              leading-[0.95]
-              tracking-[-2px]
-              md:tracking-[-4px]
-              font-[350]"
-            >
-              Designing
-              <br />
-              digital clarity
-            </h2>
-
+           <h2
+  className="
+  text-[42px]
+  sm:text-[58px]
+  md:text-[90px]
+  leading-[1.05]
+  tracking-[-2px]
+  md:tracking-[-4px]
+  font-[350]
+  flex
+  flex-col
+  gap-2
+  md:gap-4"
+>
+  <span>Designing</span>
+  <span>digital clarity</span>
+</h2>
           </motion.div>
 
           {/* RIGHT */}
@@ -188,83 +190,87 @@ export default function AboutSection() {
 
             </motion.div>
 
-            {/* RIGHT SIDE CARDS */}
-            <div
-              className="
-              w-full
-              lg:w-auto
-              flex
-              flex-col
-              sm:flex-row
-              lg:flex-col
-              items-stretch
-              justify-center
-              gap-6"
-            >
+           {/* RIGHT SIDE CARDS */}
+<div
+  className="
+  w-full
+  lg:w-auto
+  flex
+  flex-row
+  lg:flex-col
+  items-stretch
+  justify-center
+  gap-4
+  sm:gap-6"
+>
 
-              {/* INTERFACE */}
-              <motion.div
-                animate={{
-                  y: [0, -18, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="
-                flex-1
-                lg:w-[260px]
-                p-6
-                rounded-[28px]
-                bg-white/70
-                backdrop-blur-xl
-                border
-                border-white/40"
-              >
-                <p className="text-black/40 text-sm mb-10">
-                  Interface System
-                </p>
+  {/* INTERFACE */}
+  <motion.div
+    animate={{
+      y: [0, -18, 0],
+    }}
+    transition={{
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+    flex-1
+    lg:w-[260px]
+    p-5
+    sm:p-6
+    rounded-[24px]
+    lg:rounded-[28px]
+    bg-white/70
+    backdrop-blur-xl
+    border
+    border-white/40"
+  >
+    <p className="text-black/40 text-xs sm:text-sm mb-6 sm:mb-10">
+      Interface System
+    </p>
 
-                <div className="space-y-3">
-                  <div className="h-3 rounded-full bg-black/10 w-full" />
-                  <div className="h-3 rounded-full bg-black/10 w-[70%]" />
-                  <div className="h-3 rounded-full bg-black/10 w-[50%]" />
-                </div>
-              </motion.div>
+    <div className="space-y-2 sm:space-y-3">
+      <div className="h-2.5 sm:h-3 rounded-full bg-black/10 w-full" />
+      <div className="h-2.5 sm:h-3 rounded-full bg-black/10 w-[70%]" />
+      <div className="h-2.5 sm:h-3 rounded-full bg-black/10 w-[50%]" />
+    </div>
+  </motion.div>
 
-              {/* MOTION */}
-              <motion.div
-                animate={{
-                  y: [0, 18, 0],
-                }}
-                transition={{
-                  duration: 7,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="
-                flex-1
-                lg:w-[300px]
-                p-8
-                rounded-[30px]
-                bg-black
-                text-white"
-              >
+  {/* MOTION */}
+  <motion.div
+    animate={{
+      y: [0, 18, 0],
+    }}
+    transition={{
+      duration: 7,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+    flex-1
+    lg:w-[300px]
+    p-5
+    sm:p-8
+    rounded-[24px]
+    lg:rounded-[30px]
+    bg-black
+    text-white"
+  >
 
-                <p className="text-white/40 text-sm mb-16">
-                  Motion Engine
-                </p>
+    <p className="text-white/40 text-xs sm:text-sm mb-10 sm:mb-16">
+      Motion Engine
+    </p>
 
-                <div className="flex items-end gap-3 h-24">
-                  <div className="w-6 h-10 bg-white/30 rounded-full" />
-                  <div className="w-6 h-16 bg-white/50 rounded-full" />
-                  <div className="w-6 h-20 bg-white rounded-full" />
-                </div>
+    <div className="flex items-end gap-2 sm:gap-3 h-20 sm:h-24">
+      <div className="w-5 sm:w-6 h-8 sm:h-10 bg-white/30 rounded-full" />
+      <div className="w-5 sm:w-6 h-14 sm:h-16 bg-white/50 rounded-full" />
+      <div className="w-5 sm:w-6 h-16 sm:h-20 bg-white rounded-full" />
+    </div>
 
-              </motion.div>
+  </motion.div>
 
-            </div>
+</div>
 
           </div>
 
