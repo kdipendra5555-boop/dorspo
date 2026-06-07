@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -339,83 +340,100 @@ export default function Footer() {
     </motion.div>
 
     {/* COMPANY */}
-    <motion.div
-      whileHover={{
-        y: -4,
-      }}
-      className="
-      relative
-      rounded-[28px]
-      border
-      border-black/5
-      bg-white/45
-      backdrop-blur-xl
-      p-8
-      overflow-hidden"
-    >
+<motion.div
+  whileHover={{
+    y: -4,
+  }}
+  className="
+  relative
+  rounded-[28px]
+  border
+  border-black/5
+  bg-white/45
+  backdrop-blur-xl
+  p-8
+  overflow-hidden"
+>
 
-      <div
-        className="
-        absolute
-        right-0
-        top-0
-        w-40
-        h-40
-        rounded-full
-        bg-black/[0.03]
-        blur-3xl"
-      />
+  <div
+    className="
+    absolute
+    right-0
+    top-0
+    w-40
+    h-40
+    rounded-full
+    bg-black/[0.03]
+    blur-3xl"
+  />
 
-      <p
-        className="
-        relative
-        z-10
-        text-[11px]
-        uppercase
-        tracking-[0.32em]
-        text-black/35
-        mb-10"
+  <p
+    className="
+    relative
+    z-10
+    text-[11px]
+    uppercase
+    tracking-[0.32em]
+    text-black/35
+    mb-10"
+  >
+    Company
+  </p>
+
+  <div className="relative z-10 space-y-5">
+
+    {[
+      {
+        name: "About Us",
+        path: "/about",
+      },
+      {
+        name: "Contact",
+        path: "/contact",
+      },
+      {
+        name: "Privacy Policy",
+        path: "/privacy-policy",
+      },
+      {
+        name: "Terms & Conditions",
+        path: "/terms-and-conditions",
+      },
+    ].map((item) => (
+      <motion.div
+        key={item.name}
+        whileHover={{
+          x: 6,
+        }}
       >
-        Company
-      </p>
 
-      <div className="relative z-10 space-y-5">
+        <Link
+          to={item.path}
+          className="
+          flex
+          items-center
+          justify-between
+          text-[15px]
+          text-black/65
+          hover:text-black
+          transition"
+        >
 
-        {[
-          "About Us",
-          "Contact",
-          "Privacy Policy",
-          "Terms & Conditions",
-        ].map((item) => (
-          <motion.a
-            key={item}
-            href="/"
-            whileHover={{
-              x: 6,
-            }}
-            className="
-            flex
-            items-center
-            justify-between
-            text-[15px]
-            text-black/65
-            hover:text-black
-            transition"
-          >
+          <span>{item.name}</span>
 
-            <span>{item}</span>
+          <ArrowUpRight
+            size={14}
+            className="opacity-40"
+          />
 
-            <ArrowUpRight
-              size={14}
-              className="opacity-40"
-            />
+        </Link>
 
-          </motion.a>
-        ))}
+      </motion.div>
+    ))}
 
-      </div>
+  </div>
 
-    </motion.div>
+</motion.div>
 
     {/* CONTACT */}
     <motion.div
