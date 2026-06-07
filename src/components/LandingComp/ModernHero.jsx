@@ -128,12 +128,12 @@ export default function MinimalSphereHero() {
   text-[70px]
   sm:text-[110px]
   md:text-[160px]
-  leading-[0.95]
+  leading-[.95]
   tracking-[-4px]
   font-[400]
   max-w-[1100px]"
 >
-  <span className="block mb-12">Simplify</span>
+  <span className="block mb-10">Simplify</span>
   <span className="block">with dorspo</span>
 </motion.h1>
 

@@ -109,44 +109,47 @@ export default function Navbar() {
           >
 
             {/* SMALL TEXT */}
-            <p
-              className="
-              text-[18px]
-              sm:text-[24px]
-              md:text-[34px]
-              font-[600]
-              tracking-[-1px]
-              leading-none
-              whitespace-nowrap
-              "
-            >
-              dorspo
-            </p>
+<p
+  className="
+  text-[24px]
+  sm:text-[34px]
+  md:text-[46px]
+  lg:text-[58px]
+  font-[600]
+  tracking-[-2px]
+  leading-none
+  whitespace-nowrap
+  "
+>
+  dorspo
+</p>
 
-            {/* BIG TEXT */}
-            <motion.h1
-              animate={{
-                opacity: hideText ? 0 : 1,
-                x: hideText ? -40 : 0,
-                width: hideText ? 0 : "auto",
-                marginLeft: hideText ? 0 : "8px",
-              }}
-              transition={{
-                duration: 0.45,
-              }}
-              className="
-              hidden
-              lg:block
-              overflow-hidden
-              whitespace-nowrap
-              text-[52px]
-              leading-none
-              tracking-[-4px]
-              font-[350]
-              "
-            >
-              timeless
-            </motion.h1>
+           {/* BIG TEXT */}
+<motion.h1
+  animate={{
+    opacity: hideText ? 0 : 1,
+    x: hideText ? -40 : 0,
+    width: hideText ? 0 : "auto",
+    marginLeft: hideText ? 0 : "10px",
+    y: hideText ? -10 : 8,
+  }}
+  transition={{
+    duration: 0.45,
+  }}
+  className="
+  hidden
+  lg:block
+  overflow-hidden
+  whitespace-nowrap
+  text-[78px]
+  xl:text-[96px]
+  leading-[0.9]
+  tracking-[-6px]
+  font-[320]
+  "
+>
+  timeless
+</motion.h1>
 
           </div>
 
