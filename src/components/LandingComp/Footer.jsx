@@ -44,7 +44,9 @@ export default function Footer() {
         pb-10"
       >
 
-      <motion.h1
+    {/* SIRF IS H1 SECTION KO REPLACE KARO */}
+
+<motion.h1
   whileHover={{
     scale: 1.015,
   }}
@@ -58,25 +60,62 @@ export default function Footer() {
   items-center
   justify-center
   gap-8
-  text-[120px]
-  sm:text-[220px]
-  md:text-[340px]
-  leading-none
-  tracking-[-16px]
-  font-[500]
-  whitespace-nowrap
   cursor-default"
 >
 
-  {/* HOVER LOGO */}
+ 
+ {/* MOBILE LOGO */}
+<motion.img
+  src="/images/logodor.png"
+  alt="logo"
+  initial={{
+    opacity: 0,
+    scale: 0.6,
+    y: 30,
+  }}
+  whileInView={{
+    opacity: 1,
+    scale: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.5,
+  }}
+  transition={{
+    duration: 1,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+  animate={{
+    y: [0, -8, 0],
+  }}
+  className="
+  absolute
+  z-20
+
+  -top-16
+  sm:-top-20
+
+  w-[90px]
+  h-[90px]
+
+  sm:w-[130px]
+  sm:h-[130px]
+
+  object-contain
+
+  md:hidden"
+/>
+
+  {/* DESKTOP LOGO */}
   <motion.img
     src="/images/logodor.png"
     alt="logo"
     className="
     hidden
     md:block
-   w-[220px]
-h-[220px]
+    w-[220px]
+    h-[220px]
     object-contain
 
     opacity-0
@@ -97,9 +136,24 @@ h-[220px]
   {/* TEXT */}
   <span
     className="
+    text-[92px]
+    sm:text-[180px]
+    md:text-[340px]
+
+    leading-none
+
+    tracking-[-6px]
+    sm:tracking-[-10px]
+    md:tracking-[-16px]
+
+    font-[500]
+    whitespace-nowrap
+
     text-black/[0.06]
+
     transition-all
     duration-700
+
     group-hover:text-transparent
     group-hover:bg-clip-text
     group-hover:bg-gradient-to-r

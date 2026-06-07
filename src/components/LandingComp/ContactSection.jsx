@@ -18,7 +18,8 @@ export default function ContactSection() {
         className="
         absolute inset-0
         bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)]
-        bg-[size:80px_80px]"
+        bg-[size:40px_40px]
+        md:bg-[size:80px_80px]"
       />
 
       {/* GLOW */}
@@ -29,8 +30,10 @@ export default function ContactSection() {
         top-1/2
         -translate-x-1/2
         -translate-y-1/2
-        w-[900px]
-        h-[900px]
+        w-[320px]
+        h-[320px]
+        md:w-[900px]
+        md:h-[900px]
         rounded-full
         bg-black/[0.03]
         blur-3xl"
@@ -42,9 +45,10 @@ export default function ContactSection() {
         z-10
         max-w-[1700px]
         mx-auto
-        px-6
+        px-5
+        sm:px-6
         md:px-12
-        py-32
+        py-24
         md:py-44"
       >
 
@@ -55,7 +59,8 @@ export default function ContactSection() {
           flex-col
           xl:flex-row
           justify-between
-          gap-20"
+          gap-14
+          md:gap-20"
         >
 
           {/* LEFT */}
@@ -69,29 +74,34 @@ export default function ContactSection() {
 
             <p
               className="
-              text-[13px]
+              text-[11px]
+              sm:text-[13px]
               uppercase
               tracking-[0.35em]
               text-black/35
-              mb-10"
+              mb-6
+              md:mb-10"
             >
               Contact
             </p>
 
             <h2
               className="
-              text-[48px]
+              text-[46px]
               sm:text-[72px]
               md:text-[110px]
-              leading-[0.9]
-              tracking-[-6px]
-              font-[330]"
+              leading-[0.92]
+              tracking-[-2px]
+              md:tracking-[-6px]
+              font-[330]
+              flex
+              flex-col
+              gap-2
+              md:gap-4"
             >
-              Let’s build
-              <br />
-              something
-              <br />
-              timeless
+              <span>Let’s build</span>
+              <span>something</span>
+              <span>timeless</span>
             </h2>
 
           </motion.div>
@@ -104,13 +114,16 @@ export default function ContactSection() {
             transition={{ delay: 0.2, duration: 1 }}
             className="
             max-w-[420px]
-            pt-6"
+            pt-0
+            xl:pt-6"
           >
 
             <p
               className="
-              text-[17px]
-              leading-[2]
+              text-[15px]
+              sm:text-[17px]
+              leading-[1.9]
+              md:leading-[2]
               text-black/50"
             >
               Have a project, idea or collaboration in mind?
@@ -141,10 +154,11 @@ export default function ContactSection() {
           }}
           className="
           relative
-          mt-24
+          mt-20
           md:mt-36
           overflow-hidden
-          rounded-[48px]
+          rounded-[32px]
+          md:rounded-[48px]
           border
           border-black/5
           bg-white/55
@@ -164,7 +178,8 @@ export default function ContactSection() {
               relative
               w-full
               lg:w-[38%]
-              p-10
+              p-6
+              sm:p-8
               md:p-16
               border-b
               lg:border-b-0
@@ -178,8 +193,10 @@ export default function ContactSection() {
                 absolute
                 left-0
                 top-0
-                w-[300px]
-                h-[300px]
+                w-[180px]
+                h-[180px]
+                md:w-[300px]
+                md:h-[300px]
                 rounded-full
                 bg-black/[0.04]
                 blur-3xl"
@@ -189,22 +206,29 @@ export default function ContactSection() {
 
                 <h3
                   className="
-                  text-[42px]
+                  text-[38px]
+                  sm:text-[48px]
                   md:text-[56px]
                   leading-[0.95]
-                  tracking-[-3px]
-                  font-[340]"
+                  tracking-[-2px]
+                  md:tracking-[-3px]
+                  font-[340]
+                  flex
+                  flex-col
+                  gap-1"
                 >
-                  Start your
-                  <br />
-                  next project
+                  <span>Start your</span>
+                  <span>next project</span>
                 </h3>
 
                 <p
                   className="
-                  mt-8
-                  text-[16px]
-                  leading-[2]
+                  mt-6
+                  md:mt-8
+                  text-[14px]
+                  md:text-[16px]
+                  leading-[1.9]
+                  md:leading-[2]
                   text-black/55
                   max-w-[320px]"
                 >
@@ -213,81 +237,93 @@ export default function ContactSection() {
                 </p>
 
                 {/* CONTACT INFO */}
-                <div className="mt-16 space-y-8">
+                <div className="mt-10 md:mt-16 space-y-6 md:space-y-8">
 
                   <div className="flex items-start gap-4">
+
                     <div
                       className="
-                      w-12
-                      h-12
+                      w-11
+                      h-11
+                      md:w-12
+                      md:h-12
                       rounded-2xl
                       bg-black/[0.04]
                       flex
                       items-center
                       justify-center"
                     >
-                      <Mail size={18} />
+                      <Mail size={17} />
                     </div>
 
                     <div>
-                      <p className="text-sm text-black/40 mb-1">
+                      <p className="text-xs md:text-sm text-black/40 mb-1">
                         Email
                       </p>
 
-                      <p className="text-black/75">
+                      <p className="text-[14px] md:text-[16px] text-black/75 break-all">
                         hello@dorspo.com
                       </p>
                     </div>
+
                   </div>
 
                   <div className="flex items-start gap-4">
+
                     <div
                       className="
-                      w-12
-                      h-12
+                      w-11
+                      h-11
+                      md:w-12
+                      md:h-12
                       rounded-2xl
                       bg-black/[0.04]
                       flex
                       items-center
                       justify-center"
                     >
-                      <Phone size={18} />
+                      <Phone size={17} />
                     </div>
 
                     <div>
-                      <p className="text-sm text-black/40 mb-1">
+                      <p className="text-xs md:text-sm text-black/40 mb-1">
                         Phone
                       </p>
 
-                      <p className="text-black/75">
+                      <p className="text-[14px] md:text-[16px] text-black/75">
                         +91 98765 43210
                       </p>
                     </div>
+
                   </div>
 
                   <div className="flex items-start gap-4">
+
                     <div
                       className="
-                      w-12
-                      h-12
+                      w-11
+                      h-11
+                      md:w-12
+                      md:h-12
                       rounded-2xl
                       bg-black/[0.04]
                       flex
                       items-center
                       justify-center"
                     >
-                      <MapPin size={18} />
+                      <MapPin size={17} />
                     </div>
 
                     <div>
-                      <p className="text-sm text-black/40 mb-1">
+                      <p className="text-xs md:text-sm text-black/40 mb-1">
                         Location
                       </p>
 
-                      <p className="text-black/75">
+                      <p className="text-[14px] md:text-[16px] text-black/75">
                         Uttar Pradesh, India
                       </p>
                     </div>
+
                   </div>
 
                 </div>
@@ -302,19 +338,23 @@ export default function ContactSection() {
               relative
               w-full
               lg:w-[62%]
-              p-10
+              p-6
+              sm:p-8
               md:p-16"
             >
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
 
                 {/* NAME */}
                 <div>
+
                   <label
                     className="
-                    text-[12px]
+                    text-[11px]
+                    md:text-[12px]
                     uppercase
-                    tracking-[0.25em]
+                    tracking-[0.22em]
+                    md:tracking-[0.25em]
                     text-black/35"
                   >
                     Full Name
@@ -324,29 +364,38 @@ export default function ContactSection() {
                     type="text"
                     placeholder="Enter your name here"
                     className="
-                    mt-4
+                    mt-3
+                    md:mt-4
                     w-full
-                    h-16
+                    h-14
+                    md:h-16
                     rounded-2xl
                     border
                     border-black/5
                     bg-black/[0.02]
-                    px-6
+                    px-5
+                    md:px-6
                     outline-none
+                    text-[14px]
+                    md:text-[15px]
                     text-black/80
                     placeholder:text-black/25
                     focus:border-black/15
                     transition"
                   />
+
                 </div>
 
                 {/* EMAIL */}
                 <div>
+
                   <label
                     className="
-                    text-[12px]
+                    text-[11px]
+                    md:text-[12px]
                     uppercase
-                    tracking-[0.25em]
+                    tracking-[0.22em]
+                    md:tracking-[0.25em]
                     text-black/35"
                   >
                     Email
@@ -356,29 +405,38 @@ export default function ContactSection() {
                     type="email"
                     placeholder="youremail@example.com"
                     className="
-                    mt-4
+                    mt-3
+                    md:mt-4
                     w-full
-                    h-16
+                    h-14
+                    md:h-16
                     rounded-2xl
                     border
                     border-black/5
                     bg-black/[0.02]
-                    px-6
+                    px-5
+                    md:px-6
                     outline-none
+                    text-[14px]
+                    md:text-[15px]
                     text-black/80
                     placeholder:text-black/25
                     focus:border-black/15
                     transition"
                   />
+
                 </div>
 
                 {/* SERVICE */}
                 <div className="md:col-span-2">
+
                   <label
                     className="
-                    text-[12px]
+                    text-[11px]
+                    md:text-[12px]
                     uppercase
-                    tracking-[0.25em]
+                    tracking-[0.22em]
+                    md:tracking-[0.25em]
                     text-black/35"
                   >
                     Service
@@ -388,29 +446,38 @@ export default function ContactSection() {
                     type="text"
                     placeholder="Branding / Website / Printing"
                     className="
-                    mt-4
+                    mt-3
+                    md:mt-4
                     w-full
-                    h-16
+                    h-14
+                    md:h-16
                     rounded-2xl
                     border
                     border-black/5
                     bg-black/[0.02]
-                    px-6
+                    px-5
+                    md:px-6
                     outline-none
+                    text-[14px]
+                    md:text-[15px]
                     text-black/80
                     placeholder:text-black/25
                     focus:border-black/15
                     transition"
                   />
+
                 </div>
 
                 {/* MESSAGE */}
                 <div className="md:col-span-2">
+
                   <label
                     className="
-                    text-[12px]
+                    text-[11px]
+                    md:text-[12px]
                     uppercase
-                    tracking-[0.25em]
+                    tracking-[0.22em]
+                    md:tracking-[0.25em]
                     text-black/35"
                   >
                     Message
@@ -420,21 +487,27 @@ export default function ContactSection() {
                     rows={6}
                     placeholder="Tell us about your project..."
                     className="
-                    mt-4
+                    mt-3
+                    md:mt-4
                     w-full
-                    rounded-[28px]
+                    rounded-[24px]
+                    md:rounded-[28px]
                     border
                     border-black/5
                     bg-black/[0.02]
-                    px-6
+                    px-5
+                    md:px-6
                     py-5
                     outline-none
                     resize-none
+                    text-[14px]
+                    md:text-[15px]
                     text-black/80
                     placeholder:text-black/25
                     focus:border-black/15
                     transition"
                   />
+
                 </div>
 
               </div>
@@ -449,16 +522,21 @@ export default function ContactSection() {
                 }}
                 className="
                 group
-                mt-10
-                h-16
-                px-8
+                mt-8
+                md:mt-10
+                h-14
+                md:h-16
+                px-7
+                md:px-8
                 rounded-full
                 bg-black
                 text-white
                 flex
                 items-center
-                gap-4
-                text-[15px]
+                gap-3
+                md:gap-4
+                text-[14px]
+                md:text-[15px]
                 tracking-[0.08em]"
               >
 
